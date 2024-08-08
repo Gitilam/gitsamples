@@ -63,3 +63,40 @@ Author: officialilam <official.ila@gmail.com>
 Date:   Fri Aug 9 00:34:10 2024 +0530
 
     for2 update
+
+D:\gitsample>git merge bugfix
+Auto-merging branch.html
+CONFLICT (content): Merge conflict in branch.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+D:\gitsample>git add .
+
+D:\gitsample>git status
+On branch dev2
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   branch.html
+
+
+D:\gitsample>git commit -m "merged the conflict"
+[dev2 435ffec] merged the conflict
+
+D:\gitsample>git status
+On branch dev2
+nothing to commit, working tree clean
+
+D:\gitsample>git branch
+  bugfix
+  dev
+* dev2
+  master
+
+D:\gitsample>git branch -d dev
+Deleted branch dev (was 67ad7a8).
+
+D:\gitsample>git branch
+  bugfix
+* dev2
+  master
