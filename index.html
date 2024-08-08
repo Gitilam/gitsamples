@@ -1,7 +1,7 @@
 
 <html>
 <body>
-<h1>new git training</h1>
+<h1>Git training</h1>
 git add "New Text Document.txt" --- pushes to staging
 git commit -m "testing commit" --- saves the changes
 git log
@@ -16,6 +16,20 @@ git checkout filename is enough
 
 D:\gitsample>git checkout index.html
 Updated 1 path from the index
+...
+
+for2) after staging . ie after git add.
+reset the latest commit pointed by HEAD which now considering the staged files
+D:\git reset HEAD index.html
+D:\gitsample>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+...
 
 
 </body>
