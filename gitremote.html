@@ -1,0 +1,32 @@
+<html>
+<body>
+<h1>Git training</h1>
+git remote
+D:\gitsample>git remote -v
+
+D:\gitsample>git remote add origin https://github.com/Gitilam/gitsamples.git
+
+D:\gitsample>git branch
+  bugfix
+* dev2
+  master
+
+D:\gitsample>git remote -v
+origin  https://github.com/Gitilam/gitsamples.git (fetch)
+origin  https://github.com/Gitilam/gitsamples.git (push)
+
+D:\gitsample>git push -u origin dev2
+info: please complete authentication in your browser...
+Enumerating objects: 57, done.
+Counting objects: 100% (57/57), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (50/50), done.
+Writing objects: 100% (57/57), 6.97 KiB | 1.39 MiB/s, done.
+Total 57 (delta 17), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (17/17), done.
+To https://github.com/Gitilam/gitsamples.git
+ * [new branch]      dev2 -> dev2
+branch 'dev2' set up to track 'origin/dev2'.
+
+</body>
+</html
