@@ -7,5 +7,8 @@ git commit -m "testing commit" --- saves the changes
 git log
 git -diff commitid1 commitid2
 Head points to latest commit
+git log --oneline
+
+undoing 1 after changes 2 after staging changes 3 after commit
 </body>
 </html
