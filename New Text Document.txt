@@ -1,0 +1,7 @@
+
+<html>
+<body>
+<h1>new git training</h1>
+git add "New Text Document.txt"
+</body>
+</html
