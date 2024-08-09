@@ -1,0 +1,154 @@
+
+<html>
+<body>
+<h1>Git Branch training</h1>git revert training
+D:\gitsample>git log
+commit 470384cc3dd6c84fce509f1ee9caad82aefc270e (HEAD -> dev2, origin/dev2)
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 02:15:15 2024 +0530
+
+     fetch update
+
+commit 31bdd50ad04f9342c70647d4007a99989b3b0432
+Author: Gitilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:55:26 2024 +0530
+
+    Update gitremote.html
+
+commit 5ad30e554745843365b4db8e744c4d4c28977452
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:50:35 2024 +0530
+
+    remote test
+
+commit 4c8037ddc898a3dcd81696da94dc3fb5643752ee
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:31:20 2024 +0530
+
+    merging complete
+
+commit 435ffec003b620e3156603e3896b6e96aeed3380
+Merge: 12d7737 bab6834
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:28:07 2024 +0530
+
+
+D:\gitsample>git branch
+  bugfix
+* dev2
+  master
+
+D:\gitsample>git checkout dev2
+Already on 'dev2'
+Your branch is up to date with 'origin/dev2'.
+
+D:\gitsample>git pull
+Already up to date.
+
+D:\gitsample>git checkout bugfix
+Switched to branch 'bugfix'
+
+D:\gitsample>git status
+On branch bugfix
+nothing to commit, working tree clean
+
+
+D:\gitsample>git branch
+* bugfix
+  dev2
+  master
+
+D:\gitsample>git merge dev2
+Updating bab6834..470384c
+Fast-forward
+ branch.html    |   2 +
+ gitremote.html |  33 +++++++++++++
+ merge.html     | 149 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ merge.txt      | 149 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 333 insertions(+)
+ create mode 100644 gitremote.html
+ create mode 100644 merge.html
+ create mode 100644 merge.txt
+
+D:\gitsample>git diff dev2 bugfix
+
+D:\gitsample>git diff bugfix master
+diff --git a/branch.html b/branch.html
+index 869bca8..d10f936 100644
+--- a/branch.html
++++ b/branch.html
+@@ -58,8 +58,5 @@ Date:   Fri Aug 9 00:23:18 2024 +0530
+
+     removed unwanted filed commit 1
+
+-    -----------------------------------------------say this line is for bug fix in bug fix branch----------
+->>>>>>> bugfix
+-
+ </body>
+ </html
+\ No newline at end of file
+diff --git a/gitremote.html b/gitremote.html
+deleted file mode 100644
+index ad0844c..0000000
+--- a/gitremote.html
++++ /dev/null
+@@ -1,33 +0,0 @@
+-<html>
+-<body>
+-<h1>Git training</h1>
+-git remote
+-D:\gitsample>git remote -v
+-
+-D:\gitsample>git remote add origin https://github.com/Gitilam/gitsamples.git
+-
+-D:\gitsample>git branch
+
+D:\gitsample>git branch
+* bugfix
+  dev2
+  master
+
+D:\gitsample>git status
+On branch bugfix
+nothing to commit, working tree clean
+
+D:\gitsample>git revert bugfix
+[bugfix 232cff1] testing revert Revert " fetch update"
+ 2 files changed, 2 insertions(+), 198 deletions(-)
+ delete mode 100644 merge.html
+
+D:\gitsample>git log
+commit 232cff16d81edf5bc54621f365fb3085e0f31b4c (HEAD -> bugfix)
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 11:40:18 2024 +0530
+
+    testing revert Revert " fetch update"
+
+    This reverts commit 470384cc3dd6c84fce509f1ee9caad82aefc270e.
+
+commit 470384cc3dd6c84fce509f1ee9caad82aefc270e (origin/dev2, dev2)
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 02:15:15 2024 +0530
+
+     fetch update
+
+commit 31bdd50ad04f9342c70647d4007a99989b3b0432
+Author: Gitilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:55:26 2024 +0530
+
+    Update gitremote.html
+
+commit 5ad30e554745843365b4db8e744c4d4c28977452
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:50:35 2024 +0530
+
+    remote test
+
+commit 4c8037ddc898a3dcd81696da94dc3fb5643752ee
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:31:20 2024 +0530
+
+D:\gitsample>
+
+</body>
+</html>
