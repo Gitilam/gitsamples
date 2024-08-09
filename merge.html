@@ -1,0 +1,150 @@
+
+<html>
+<body>
+<h1>Git Branch training</h1>
+
+D:\gitsample>git checkout master
+Switched to branch 'master'
+
+D:\gitsample>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\gitsample>git branch
+  dev
+  dev2
+* master
+D:\gitsample>git checkout master
+Switched to branch 'master'
+
+D:\gitsample>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\gitsample>git branch
+  dev
+  dev2
+* master
+
+D:\gitsample>git merge dev2
+Updating c558e3c..d5a5220
+Fast-forward
+ branch.html | 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 54 insertions(+)
+
+D:\gitsample>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\gitsample>git log
+commit d5a522086e78dd654c54f7b6106feca3257e68a1 (HEAD -> master, dev2)
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 00:57:22 2024 +0530
+
+    udpdated on dev2 again
+
+commit 6fddb7f32974d3770ce2554b52fe50c9caa709f1
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 00:54:19 2024 +0530
+
+    udpdated on dev2
+
+commit c558e3c94e0358cdc89581e3f645655dec5cb424
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 00:46:35 2024 +0530
+
+    created branch file
+
+commit 67ad7a863cae73a511c3ed8bf57f7961d10e2d12 (dev)
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 00:37:52 2024 +0530
+
+    for 3
+
+commit fb696b5c94800e0dcf9a54b5a28d68be83a66678
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 00:34:10 2024 +0530
+
+    for2 update
+
+D:\gitsample>git merge bugfix
+Auto-merging branch.html
+CONFLICT (content): Merge conflict in branch.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+D:\gitsample>git add .
+
+D:\gitsample>git status
+On branch dev2
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   branch.html
+
+
+D:\gitsample>git commit -m "merged the conflict"
+[dev2 435ffec] merged the conflict
+
+D:\gitsample>git status
+On branch dev2
+nothing to commit, working tree clean
+
+D:\gitsample>git branch
+  bugfix
+  dev
+* dev2
+  master
+
+D:\gitsample>git branch -d dev
+Deleted branch dev (was 67ad7a8).
+
+D:\gitsample>git branch
+  bugfix
+* dev2
+  master
+  D:\gitsample>
+
+  
+D:\gitsample>git log
+commit 64b32d9f5c713920a3581a335920b7994c3f0c83 (HEAD -> dev2, origin/dev2)
+Author: Gitilam <official.ila@gmail.com>
+Date:   Fri Aug 9 02:02:42 2024 +0530
+
+    Update merge.txt
+
+commit 31bdd50ad04f9342c70647d4007a99989b3b0432
+Author: Gitilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:55:26 2024 +0530
+
+    Update gitremote.html
+
+commit 5ad30e554745843365b4db8e744c4d4c28977452
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:50:35 2024 +0530
+
+    remote test
+
+commit 4c8037ddc898a3dcd81696da94dc3fb5643752ee
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:31:20 2024 +0530
+
+    merging complete
+
+commit 435ffec003b620e3156603e3896b6e96aeed3380
+Merge: 12d7737 bab6834
+Author: officialilam <official.ila@gmail.com>
+Date:   Fri Aug 9 01:28:07 2024 +0530
+
+D:\gitsample>git reset --hard 31bdd50ad04f9342c70647d4007a99989b3b0432
+HEAD is now at 31bdd50 Update gitremote.html
+
+D:\gitsample>git push -f
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Gitilam/gitsamples.git
+ + 64b32d9...31bdd50 dev2 -> dev2 (forced update)
+
+D:\gitsample>
+
+</body>
+</html
